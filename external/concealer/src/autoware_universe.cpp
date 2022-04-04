@@ -50,7 +50,7 @@ auto AutowareUniverse::initialize(const geometry_msgs::msg::Pose & initial_pose)
 auto AutowareUniverse::plan(const std::vector<geometry_msgs::msg::PoseStamped> & route) -> void
 {
   assert(not route.empty());
-
+  sleep(10);
   task_queue.delay([this, route] {
     waitForAutowareStateToBeWaitingForRoute();  // NOTE: This is assertion.
     setGoalPose(route.back());
