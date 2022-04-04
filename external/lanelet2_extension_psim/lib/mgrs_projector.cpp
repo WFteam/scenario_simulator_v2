@@ -61,7 +61,7 @@ BasicPoint3d MGRSProjector::forward(const GPSPoint & gps, const int precision) c
       R"(Projected MGRS Grid changed from last projection.
       Projected point might be far away from previously projected point.
       You may want to use different projector.)";
-    throw lanelet::HdMapException(message);
+    //throw lanelet::HdMapException(message);
   }
 
   return mgrs_point;
